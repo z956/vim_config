@@ -30,7 +30,6 @@ set background=dark
 set incsearch
 set fo-=r
 set nocscopeverbose
-"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 " for kernel
 set tabstop=8
@@ -70,10 +69,9 @@ inoremap <Esc>Ol +
 inoremap <Esc>OS -
 
 " buffer related
+" shortcut for switching between buffers is defined in wintabs
 set hidden
 nnoremap bd :Kwbd<CR>
-"nnoremap <C-J> :bnext!<CR>
-"nnoremap <C-K> :bprev!<CR>
 
 " vim-airline
 set encoding=utf-8
@@ -85,15 +83,18 @@ let g:airline_theme='wombat'
 set laststatus=2
 " enable powerline-fonts
 let g:airline_powerline_fonts = 1
+" reset color scheme for tabline
+" this is a workaround for including wintabs...
+" this setting is only fit for theme wombat
 hi! TabLineFill cterm=NONE gui=NONE guifg=#32322F guibg=#32322F ctermfg=238 ctermbg=238
 hi! TabLineSel cterm=NONE gui=NONE guifg=#242424 guibg=#CAE682 ctermfg=235 ctermbg=192
 hi! TabLine cterm=NONE gui=NONE guifg=#CAE682 guibg=#242424 ctermfg=192 ctermbg=235
 
-" wintab
+" wintabs
 let g:wintabs_ui_buffer_name_format = '[%n]%t'
 nnoremap <C-J> :WintabsNext<CR>
 nnoremap <C-K> :WintabsPrevious<CR>
-nnorema <Space>1 :WintabsGo 1<CR>
+nnoremap <Space>1 :WintabsGo 1<CR>
 nnoremap <Space>2 :WintabsGo 2<CR>
 nnoremap <Space>3 :WintabsGo 3<CR>
 nnoremap <Space>4 :WintabsGo 4<CR>
