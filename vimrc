@@ -138,3 +138,5 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
+" define env variable indicate that we are in vim
+let $INSIDE_VIM = 1
