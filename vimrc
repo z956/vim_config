@@ -30,6 +30,7 @@ set background=dark
 set incsearch
 set fo-=r
 set nocscopeverbose
+set matchpairs+=<:>
 
 " for kernel
 set tabstop=8
